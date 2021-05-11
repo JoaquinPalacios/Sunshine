@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Insurance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script defer src="quoteGenerator.js"></script>
+</head>
+<body>
+
+  <nav> <!-- Navbar -->
+    <div class="topnav">
+        <img src="imagenes/ooo.jpg" alt="sun">
+        <span class="navbar-brand">Sunshine Insurance</span>
+
+      </div>            
+  </nav> <!-- ./Navbar -->
+  <div> <!-- Title, intro and table -->
+    <h2>In Sunshine Insurance we have many options for you</h2>
+    <p id="intro">We have three main options in order to cover your needs. Third party insurance, that covers the damage you may cause in others in an accident. Moreover, we have another option called Coprehensive, that includes also theft, storm damage, fire and flood. Also, there is a Comprehensive Plus option that gives you a total cover in an accident to your car and any other involve. Check the table below for more information.</p>
+    <div>
+      <table class="table table-bordered table-info" id="products">
+        <thead>
+          <tr>
+            <th scope="col">Type of Insurance</th>
+            <th scope="col">Damage to other's property</th>
+            <th scope="col">Road assistance</th>
+            <th scope="col">Storm damage</th>
+            <th scope="col">Theft</th>
+            <th scope="col">Fire</th>
+            <th scope="col">Towing</th>
+            <th scope="col">Damage to your car</th>
+            <th scope="col">Injures to you or others</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Third party</th>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Comprehensive</th>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Comprehensive Plus</th>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+            <td>&#10003</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> <!-- ./Title, intro and table -->
+  
+  <p id="allTheInfo"></p>
+  <div class="container">        
+      <br>
+      <br>
+      <h3>Get a quote in just two steps</h3>
+      <table class="table table-striped">    
+      <thead>
+          <input type="text" id="names" class="no-outline" placeholder="Full name">
+          <input type="number" id="age" class="no-outline" placeholder="Age">
+          <input type="email" id="email" class="no-outline" placeholder="Email">
+          <input type="tel" id="telephone" class="no-outline" placeholder="Telephone">
+          <div>
+            <button onclick="saveInfo()" id="infoSaved">Confirm</button>
+          </div>
+      </thead>
+      <tbody id="info" class="shadow">        	
+      </tbody>
+      </table>
+  </div>
+  <br> 
+  <div class="container shadow col-lg-6">
+      <div id="contenido" class="pb-auto" style="display: none">
+        <header class="p-3 bg-info text-white text-uppercase rounded">
+          <h1 class="text-center">Get a quote</h1>
+        </header>
+        <form class="mt-10 max-width mx-auto" action="#" id="quote-generator">
+          <div class="d-flex align-items-center mb-5">
+            <label class="font-weight-bold text-uppercase mr-3 w-20" for="brand">brand:</label>
+            <select class="d-flex mt-2 p-3 rounded" id="brand">
+              <option value="" disabled selected> Select </option>
+            </select>
+            <label class="font-weight-bold text-uppercase ml-auto mr-3 w-20" for="brand">model:</label>
+            <select class="d-flex mt-2 p-3 rounded" id="model">
+              <option value="" disabled selected> Select </option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-around align-items-center mb-5">
+            <label class="font-weight-bold text-uppercase mr-3 w-20" for="year">year:</label>
+            <select class="d-flex p-3 rounded" id="year">
+              <option value="" disabled selected> Select </option>
+            </select>
+            <label class="font-weight-bold text-uppercase ml-auto mr-3" for="color">Color:</label>
+            <input type="text" class="d-flex p-3 rounded" id="color" placeholder="  (Optional)">
+          </div>
+          <fieldset>
+            <legend class="font-weight-bold text-uppercase text-center w-full">Type of Insurance</legend>    
+            <div class="d-flex justify-content-around mt-5">
+              <div>
+                <label class="font-weight-bold text-uppercase mr-2">Third party</label>
+                <input type="radio" name="tipo" value="third-party" checked>
+                </label>
+              </div>
+              <div>
+                <label class="font-weight-bold  text-uppercase mr-2">Comprehensive</label>
+                <input type="radio" name="tipo" value="comprehensive">
+                </label>
+              </div>
+              <div>
+                <label class="font-weight-bold  text-uppercase mr-2">Comprehensive Plus</label>
+                <input type="radio" name="tipo" value="comprehensive-plus">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+    
+          <div id="loadingQuote" style="display: none">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+          <div id="results"></div>
+          <div class="d-flex justify-content-center py-4">
+            <button type="submit"
+                class="mx-auto bg-info hover text-white font-weight-bold py-2 px-20 rounded">Get Quote
+            </button>
+          </div>
+    
+        </form>
+      </div>
+    </div>
+     <!-- ./Form and container-->
+    <br>
+
+    <!-- Images of Services -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="imagenes/mapa.jpg" style="width:100%">
+        <div class="text">Road Assistance</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="imagenes/online.jpg" style="width:100%">
+        <div class="text">100% online</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="imagenes/cosas.jpg" style="width:100%">
+        <div class="text">We cover your belongings</div>
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>     <!-- ./Images of Services -->
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-2">
+          <i class="fab fa-facebook-f fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-2">
+          <i class="fab fa-twitter fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-2">
+          <i class="fab fa-google-plus-g fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-2">
+          <i class="fab fa-linkedin-in fa-2x"> </i>
+        </a>
+      </li>
+      
+    </ul>
+    <!-- ./Social buttons -->
+
+  </div>
+  <!-- ./Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-2">© 2020 Copyright  
+    <a href="">  Sunshine Insurance</a>
+  </div> 
+
+</footer>
+</body>
+</html>

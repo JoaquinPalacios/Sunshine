@@ -1,0 +1,305 @@
+* {
+	box-sizing: border-box;
+}
+
+.topnav {
+	background-color: rgb(0, 50, 80);
+	overflow: hidden;
+	padding-bottom: 5px;
+	padding-top: 15px;
+  }
+img {
+	padding-left: 40px;
+	vertical-align: text-bottom;
+	width: 120px;
+}
+.navbar-brand {	
+	color: whitesmoke;
+	font-weight: bolder;
+	font-size: 40px;
+	padding-left: 20px;		
+}
+
+h2 {
+	text-align: center;
+	color: rgb(80, 80, 80);
+	margin-top: 50px;
+}
+#intro {
+	color: rgb(80, 80, 80);
+	text-align: justify;
+	font-size: large;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-top: 30px;
+}
+#products {
+	font-size: 0.9em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	width: 80%;
+}
+@media (min-width: 1200px) {
+	.col-lg-6 {
+		position: relative;		
+		right: -220px;
+		top: -300px;
+		margin-bottom: -200px;
+	}	
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#products {
+		font-size: small;
+	}
+	.col-lg-6 {
+		position: relative;
+		right: -220px;
+		top: -300px;
+	}	
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	#products {
+		font-size: small;
+		overflow: scroll;
+	}
+}
+@media (max-width: 767px) {
+	#products {
+		font-size: x-small;
+		font-weight: normal;
+		overflow: scroll;
+	}
+}
+th {
+	color: rgb(80, 80, 80);
+}
+tr {	
+	text-align: center;
+}
+h3 {
+	color: rgb(80, 80, 80);
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+h4 {
+	color: rgb(80, 80, 80);
+}
+
+.table-striped {
+	color:  rgb(80, 80, 80);
+	margin-top: 100px;
+	width: 400px;
+}
+th {
+	text-align: center;
+	text-transform: uppercase;
+}
+#names {
+	border-top: hidden;
+	border-left: hidden;
+	border-right: hidden;
+	margin-right: 7px;
+}
+#age {
+	border-top: hidden;
+	border-left: hidden;
+	border-right: hidden;
+	margin-right: 7px;
+}
+#email {
+	border-top: hidden;
+	border-left: hidden;
+	border-right: hidden;
+	margin-right: 7px;
+}
+#telephone {
+	border-top: hidden;
+	border-left: hidden;
+	border-right: hidden;
+}
+.no-outline:focus {
+	outline: none;
+  }
+#infoSaved {
+	background-color: #5bc0de;
+	border-radius: 5px;
+	color: whitesmoke;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.font-weight-bold[for="year"] {
+	margin-left: 51px;
+}
+#color {
+	border: solid grey 1px;
+	font-style: italic;
+	width: 170px;
+}
+.loadingQuote {	
+	text-align: center;
+}
+.error {
+    background-color: #FBE9E7;
+	border: 1px solid #F4511E;
+	border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+	color: #F4511E;
+}
+.correct {
+    background-color: rgb(211, 249, 187);
+	border: 1px solid rgb(50, 167, 0);
+	border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(4, 150, 50);
+}
+#results  {
+    margin-bottom: 40px;
+}
+#results div {
+    border-bottom: 2px solid #5bc0de;
+    text-align: center;
+	padding: 0  0 20px 0;
+}
+#results div p {
+    margin-bottom: 0;
+}
+#results div p.header {
+    background-color: #5bc0de;
+	margin-bottom: 10px;
+	margin-top: 30px;
+    color:white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.spinner {
+	margin: 100px auto 0;
+	padding-bottom: 70px;
+	width: 70px;
+	text-align: center;
+}
+  
+.spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: #333;
+  
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+  
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+  
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+  
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0) }
+	40% { -webkit-transform: scale(1.0) }
+}
+  
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+	  -webkit-transform: scale(0);
+	  transform: scale(0);
+	} 40% { 
+	  -webkit-transform: scale(1.0);
+	  transform: scale(1.0);
+	}
+}
+body {
+	height: 100%;
+} 
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 550px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4rem;
+  }
+  
+  /* Texto de las fotos */
+  .text {
+	color:  rgb(80, 80, 80);
+	font-size: 32px;
+	font-weight: bold;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 10px;
+	left: 35px;
+	width: 90%;
+	text-align: center;
+	text-shadow: 2px 2px 2px lightblue;
+  }
+
+  
+  /* Dots/bullets/indicators */
+  .dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active {
+	background-color: #717171;
+  }
+  
+  /* Fading animacion */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1s;
+	animation-name: fade;
+	animation-duration: 1s;
+	opacity: 1;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .6} 
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .6} 
+	to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+  }
+
+footer {
+	background-color: rgb(0, 50, 80);
+	color: whitesmoke;
+	margin-top: 50px;
+	padding-bottom: 5px;
+	width: 100%;
+}
+.list-unstyled {
+	color: #5bc0de;
+}
